@@ -4,6 +4,6 @@ COPY package*.json
 RUN npm install -g npm@10.2.5/
     npm install /
     npm install experss
-COPY ./backend/* . 
+COPY . . 
 EXPOSE 3000
 CMD ["node", "src/index.js", "--no-deamon"]
