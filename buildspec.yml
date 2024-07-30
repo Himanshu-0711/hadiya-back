@@ -12,9 +12,9 @@ phases:
   pre_build:
     commands:
       - echo "Install prerequisites for Docker and AWS CLI..."
-      - apt update -y
-      - apt install -y docker.io
-      - apt install unzip -y
+      - sudo apt update -y
+      - sudo apt install -y docker.io
+      - sudo apt install unzip -y
 
       # Install AWS CLI
       - echo "Installing AWS CLI..."
