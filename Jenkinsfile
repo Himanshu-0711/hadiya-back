@@ -6,7 +6,7 @@ pipeline {
         ECR_REPO_URI = '909325007152.dkr.ecr.us-east-1.amazonaws.com/hadiya-dev-backend'
         TASK_DEFINITION_NAME = 'hadiya-backend'
         CLUSTER_NAME = 'hadiya-dev-backend-cluster'
-        SERVICE_NAME = '	hadiya-backend-service'
+        SERVICE_NAME = 'hadiya-backend-service'
         CONTAINER_NAME = 'hadiya-dev-backend'
     }
     
