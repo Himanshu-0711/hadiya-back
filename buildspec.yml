@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     AWS_DEFAULT_REGION: "us-east-1"  # Set your AWS region here
-    REPOSITORY_NAME: "	hadiya-dev-backend-registry"  # Set your ECR repository name here
+    REPOSITORY_NAME: "hadiya-dev-backend"  # Set your ECR repository name here
     GIT_COMMIT: $(git log -1 --pretty=format:%h)  # Fetches the short commit hash as the tag
     IMAGE_TAG: $GIT_COMMIT  # Use the commit hash as the image tag
     AWS_ACCOUNT_ID: !Sub "${AWS::AccountId}"
@@ -27,7 +27,7 @@ phases:
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 909325007152.dkr.ecr.us-east-1.amazonaws.com
       # Set repository URI and image tag
       - echo "Setting repository URI and image tag..."
-      - export REPOSITORY_URI=909325007152.dkr.ecr.us-east-1.amazonaws.com/hadiya-dev-backend-registry
+      - export REPOSITORY_URI=909325007152.dkr.ecr.us-east-1.amazonaws.com/hadiya-dev-backend
       - export IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
 
   build:
