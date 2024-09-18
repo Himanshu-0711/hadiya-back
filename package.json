@@ -15,7 +15,7 @@
     "pm2restart": "NODE_ENV=production pm2 restart src/index.js --name hadiya-api",
     "dev-db-setup": "sequelize db:migrate && sequelize db:seed:all"
   },
-  "author": "Shoaib S. Shaikh",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "dotenv": "^16.0.1"
